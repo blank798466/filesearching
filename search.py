@@ -183,20 +183,7 @@ def search():
 
 
 if __name__ == '__main__':
-    '''
-    # 通过解析url获取其中的json数据
-    url = 'http://localhost:10000/mock/5bd6796a5572ea4e4021a5c2/filequery'
-    req = requests.get(url)
-    res = req.json()
-    pathurl = res['path']
-    print pathurl
-    res = FileSearching(path=pathurl, service_name='root')
-    print res.get_total_size()
-    print res.get_zip_url()
-    print res.get_error_url()
-    '''
     server.run(debug=True, port=8888, host='127.0.0.1')  # 指定端口、host,0.0.0.0代表不管几个网卡，任何ip都可以访问
-
     # test
     # 访问http://127.0.0.1:8888/search?path_url=/home/sev1/IdeaProjects/FileSearch-master&service_name=zjw&is_zip=0
     # 则可显示对应输出数据
